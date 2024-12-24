@@ -31,6 +31,101 @@ bleu = evaluate.load("bleu")
 dataset = "Celiadraw/text-to-mermaid-2"
 
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+
+    # data arg
+    parser.add_argument(
+        "--data", type=str, default="", help="path to training, val, or test data`"
+    )
+
+    # outputting
+    parser.add_argument(
+        "--output", type=str, default="", help="path to saving model checkpoints"
+    )
+
+    # model architecture
+    parser.add_argument(
+        "--tokenizer",
+        type=str,
+        default="google-t5/t5-small",
+        help="T5",
+    )
+
+    parser.add_argument(
+        "--model", type=str, default="google-t5/t5-small", help=" T5 model."
+    )
+
+    parser.add_argument(
+        "--checkpoint", type=str, default="", help="path to saving model checkpoints"
+    )
+
+    parser.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
+
+    # Training
+    parser.add_argument(
+        "--action",
+        type=str,
+        default="",
+        choices=["train", "evaluate", "test"],
+        help="Choose between training, evaluating, or testing the model.",
+    )
+
+    parser.add_argument(
+        "--num_epochs",
+        type=int,
+        default=10,
+        help="Number of training epochs",
+    )
+
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=42,
+        help="Training seed",
+    )
+
+    parser.add_argument(
+        "--learning_rate",
+        type=float,
+        default=5e-5,
+        help="Learning rate...",
+    )
+
+    # potentially adjust ths and LR arg defaults incase
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=8,
+        help="Batch size",
+    )
+
+    # Regularization
+    parser.add_argument(
+        "--weight_decay",
+        type=float,
+        default=0.01,
+        help="",
+    )
+
+    # Evaluation
+    parser.add_argument(
+        "--eval_batch_size",
+        type=int,
+        default=1,
+        help="",
+    )
+
+    # Test (think about this one)
+
+    return parser.parse_args()
+
+
+def compute_metrics(eval_pred):
+    predictions, labels = eval_pred
+    return bleu.compute(predictions=predictions, references=labels)
+
+
 def preprocess_dataset(data):
     """
     Function that takes HF dataset and splits into into train, val, and test.
@@ -64,16 +159,11 @@ def preprocess_dataset(data):
     return ds_split
 
 
-def parse_args():
-    parser = argparse.ArgumentParser()
-
-
-def compute_metrics(eval_pred):
-    predictions, labels = eval_pred
-    return bleu.compute(predictions=predictions, references=labels)
+# Data collator for seq2seq
 
 
 def main():
+
     print("test")
 
 
