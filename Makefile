@@ -7,6 +7,11 @@ PYTHONPATH := `pwd`
 IMAGE := text_to_mermaid
 VERSION := latest
 
+#* Run model bash scripts
+#* training script
+train:
+	bash scripts/train.sh
+
 #* Poetry
 .PHONY: poetry-download
 poetry-download:
