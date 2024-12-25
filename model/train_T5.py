@@ -100,7 +100,7 @@ def parse_args():
     parser.add_argument(
         "--batch_size",
         type=int,
-        default=8,
+        default=4,
         help="Batch size",
     )
 
@@ -229,7 +229,7 @@ def main():
             eval_strategy="epoch",
             learning_rate=args.learning_rate,
             per_device_train_batch_size=args.batch_size,
-            per_device_eval_batch_size=args.batch_size,
+            per_device_eval_batch_size=args.eval_batch_size,
             num_train_epochs=args.num_epochs,
             load_best_model_at_end=True,
             logging_steps=100,
@@ -248,7 +248,7 @@ def main():
         )
 
         print(f"Device: {device}")
-        if device == "cuda":
+        if args.device == "cuda":
             model.cuda()
 
         trainer.train()
