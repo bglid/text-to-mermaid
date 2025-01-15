@@ -38,7 +38,7 @@ python = "^3.9"
 rich = "^13.9.4"
 
 [tool.poetry.dev-dependencies]
-bandit = "^1.7.1"
+bandit = "^1.8.2"
 black = {version = "^21.10b0", allow-prereleases = true}
 darglint = "^1.8.1"
 isort = {extras = ["colors"], version = "^5.10.1"}
