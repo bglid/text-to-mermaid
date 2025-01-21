@@ -276,8 +276,8 @@ pathspec = ">=0.9.0,<1"
 platformdirs = ">=2"
 tomli = ">=0.2.6,<2.0.0"
 typing-extensions = [
-    {version = ">=3.10.0.0", markers = "python_version < \"3.10\""},
     {version = ">=3.10.0.0,<3.10.0.1 || >3.10.0.1", markers = "python_version >= \"3.10\""},
+    {version = ">=3.10.0.0", markers = "python_version < \"3.10\""},
 ]
 
 [package.extras]
@@ -1819,8 +1819,8 @@ files = [
 [package.dependencies]
 numpy = [
     {version = ">=1.22.4", markers = "python_version < \"3.11\""},
-    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
     {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -1906,13 +1906,13 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pre-commit"
-version = "4.0.1"
+version = "4.1.0"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "pre_commit-4.0.1-py2.py3-none-any.whl", hash = "sha256:efde913840816312445dc98787724647c65473daefe420785f885e8ed9a06878"},
-    {file = "pre_commit-4.0.1.tar.gz", hash = "sha256:80905ac375958c0444c65e9cebebd948b3cdb518f335a091a670a89d652139d2"},
+    {file = "pre_commit-4.1.0-py2.py3-none-any.whl", hash = "sha256:d29e7cb346295bcc1cc75fc3e92e343495e3ea0196c9ec6ba53f49f10ab6ae7b"},
+    {file = "pre_commit-4.1.0.tar.gz", hash = "sha256:ae3f018575a588e30dfddfab9a05448bfbd6b73d78709617b5a2b853549716d4"},
 ]
 
 [package.dependencies]
@@ -2310,8 +2310,8 @@ astroid = ">=3.3.8,<=3.4.0-dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
     {version = ">=0.2", markers = "python_version < \"3.11\""},
-    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
     {version = ">=0.3.7", markers = "python_version >= \"3.12\""},
+    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
 ]
 isort = ">=4.2.5,<5.13.0 || >5.13.0,<6"
 mccabe = ">=0.6,<0.8"
@@ -3493,8 +3493,8 @@ eval-type-backport = {version = "*", markers = "python_version < \"3.10\""}
 gitpython = ">=1.0.0,<3.1.29 || >3.1.29"
 platformdirs = "*"
 protobuf = [
-    {version = ">=3.15.0,<4.21.0 || >4.21.0,<5.28.0 || >5.28.0,<6", markers = "python_version == \"3.9\" and sys_platform == \"linux\""},
     {version = ">=3.19.0,<4.21.0 || >4.21.0,<5.28.0 || >5.28.0,<6", markers = "python_version > \"3.9\" or sys_platform != \"linux\""},
+    {version = ">=3.15.0,<4.21.0 || >4.21.0,<5.28.0 || >5.28.0,<6", markers = "python_version == \"3.9\" and sys_platform == \"linux\""},
 ]
 psutil = ">=5.0.0"
 pydantic = ">=2.6,<3"
@@ -3749,4 +3749,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b552dde83cbe62b0c3578f3939b4cd4b0f43b4e0d6888013d5ab6e212d972449"
+content-hash = "da0f21009ac0be368767e5c31f7667d80322cf13115847d3c025b19b21f9aaa9"
