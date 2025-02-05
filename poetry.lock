@@ -1819,8 +1819,8 @@ files = [
 [package.dependencies]
 numpy = [
     {version = ">=1.22.4", markers = "python_version < \"3.11\""},
-    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
     {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -2310,8 +2310,8 @@ astroid = ">=3.3.8,<=3.4.0-dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
     {version = ">=0.2", markers = "python_version < \"3.11\""},
-    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
     {version = ">=0.3.7", markers = "python_version >= \"3.12\""},
+    {version = ">=0.3.6", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
 ]
 isort = ">=4.2.5,<5.13.0 || >5.13.0,<6"
 mccabe = ">=0.6,<0.8"
@@ -3468,22 +3468,22 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [[package]]
 name = "wandb"
-version = "0.19.1"
+version = "0.19.6"
 description = "A CLI and library for interacting with the Weights & Biases API."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "wandb-0.19.1-py3-none-any.whl", hash = "sha256:b3195b3fe4d1b8131f64b956e6a5de7486cecfec179570986dbd6c64cd29b3c5"},
-    {file = "wandb-0.19.1-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:788c20d8c3dabe490b50961dc91298886853dd8a0276a09ef3fc5c7f1f137c1d"},
-    {file = "wandb-0.19.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:343d46c59aba3c30cf98ce8e0b9a2e1e52986a0ac0433d092de9aa856aeece98"},
-    {file = "wandb-0.19.1-py3-none-macosx_11_0_x86_64.whl", hash = "sha256:7541efa8ffab715ba932fcb5117c4255a47cadebf0365d1dc1eb684a94744573"},
-    {file = "wandb-0.19.1-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ec64a859478b9f5bcf894aedd2bcccaf6917abe7b8adbd722b2a43b7063d33db"},
-    {file = "wandb-0.19.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:405000bc3d2e369934ff1266fcc55ff968e4a0f24c2fdaa9a0585b170c01b60c"},
-    {file = "wandb-0.19.1-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:809b5ae83ed314b97db1077490f37d6c926c7c96fad9b6b5a2476534d54defb4"},
-    {file = "wandb-0.19.1-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:e01e9176b5ca9660226edcbfd9323019aa9bd5789a4b384d23ba53e062d3966e"},
-    {file = "wandb-0.19.1-py3-none-win32.whl", hash = "sha256:093cc5c39ce629390c4f465b1ae89bab2ee9b29c2a46c8b5143858dd8c73264b"},
-    {file = "wandb-0.19.1-py3-none-win_amd64.whl", hash = "sha256:1fc9d403fffb84e37f4e56a075b26b639e9f489899c9b9db9f46e3a7b7d93c64"},
-    {file = "wandb-0.19.1.tar.gz", hash = "sha256:a9b4bf790c468e7b350eeaba2de002672a5cbaa3049899ab060940e2388f429a"},
+    {file = "wandb-0.19.6-py3-none-any.whl", hash = "sha256:0b174b5f190999a8238961c63c134622bf2173147a1301ea298a9ec58abbd7d4"},
+    {file = "wandb-0.19.6-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:ad2887dd916207ead5a9f36e4aebc1b6624265f29033e4e883bb6fbd5b674080"},
+    {file = "wandb-0.19.6-py3-none-macosx_11_0_arm64.whl", hash = "sha256:ca90dd5519de1a48963536f02d6e14c150475807173b7af1d8ebe3e2f9e3afba"},
+    {file = "wandb-0.19.6-py3-none-macosx_11_0_x86_64.whl", hash = "sha256:3cb10bd1e1c0b568464a017c88eb95e0c8c3e9c1283d9ad4ee717c8977d491c1"},
+    {file = "wandb-0.19.6-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0fe6e7bedd396b2b5f92c7fab3d364f7e0e8cb9f645d0f0c27ba7be94e720931"},
+    {file = "wandb-0.19.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fd9ae9a7f08e4d3972ba341c42af787e951689e0d1a76c111aa66d09bcdadafd"},
+    {file = "wandb-0.19.6-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:ff0973ca26cd06bc5451ae7ba469ad98f74024f5678dfa0d6dc78ca36eb950b6"},
+    {file = "wandb-0.19.6-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:2e8dc997eb3ae5f22f5a1c3d4f3b30c28398dda45b9dbada9ff20b8d3984d3e2"},
+    {file = "wandb-0.19.6-py3-none-win32.whl", hash = "sha256:c0127d99e98202dc2471d44b920129c2c9242fb3a6b52a7aa8bbf9ffa35173e7"},
+    {file = "wandb-0.19.6-py3-none-win_amd64.whl", hash = "sha256:8688a4f724d37a90075312e8dccffd948adbe8b6bcb82f9d2b38b764b53269fb"},
+    {file = "wandb-0.19.6.tar.gz", hash = "sha256:4661856ee070fe8a123caece5b372d495d3cf9f58176a8f981bd716830eefc49"},
 ]
 
 [package.dependencies]
@@ -3506,12 +3506,12 @@ setuptools = "*"
 typing-extensions = {version = ">=4.4,<5", markers = "python_version < \"3.12\""}
 
 [package.extras]
-aws = ["boto3"]
+aws = ["boto3", "botocore (>=1.5.76)"]
 azure = ["azure-identity", "azure-storage-blob"]
 gcp = ["google-cloud-storage"]
 importers = ["filelock", "mlflow", "polars (<=1.2.1)", "rich", "tenacity"]
 kubeflow = ["google-cloud-storage", "kubernetes", "minio", "sh"]
-launch = ["awscli", "azure-containerregistry", "azure-identity", "azure-storage-blob", "boto3", "botocore", "chardet", "google-auth", "google-cloud-aiplatform", "google-cloud-artifact-registry", "google-cloud-compute", "google-cloud-storage", "iso8601", "jsonschema", "kubernetes", "kubernetes-asyncio", "nbconvert", "nbformat", "optuna", "pydantic", "pyyaml (>=6.0.0)", "tomli", "typing-extensions"]
+launch = ["awscli", "azure-containerregistry", "azure-identity", "azure-storage-blob", "boto3", "botocore (>=1.5.76)", "chardet", "google-auth", "google-cloud-aiplatform", "google-cloud-artifact-registry", "google-cloud-compute", "google-cloud-storage", "iso8601", "jsonschema", "kubernetes", "kubernetes-asyncio", "nbconvert", "nbformat", "optuna", "pydantic", "pyyaml (>=6.0.0)", "tomli", "typing-extensions"]
 media = ["bokeh", "imageio", "moviepy", "numpy", "pillow", "plotly (>=5.18.0)", "rdkit", "soundfile"]
 models = ["cloudpickle"]
 perf = ["orjson"]
@@ -3749,4 +3749,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b552dde83cbe62b0c3578f3939b4cd4b0f43b4e0d6888013d5ab6e212d972449"
+content-hash = "eccd4eb6b5d5010af4ab85f8c67101e7ed70ff53e9a9eaaa22d043f6c3c32249"
